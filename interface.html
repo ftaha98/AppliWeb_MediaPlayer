@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>MediaPlayer</title>
+    <link rel="stylesheet" href="mainStyle.css">
+</head>
+
+<body>
+    <div id="main">
+
+    <div id="player">
+        <div id="audioAlbum">
+            <audio id="audioplayer" src="lettre-a-une-femme.mp3"></audio>
+            <img src="album-NI.png" alt="Album en cours de lecture">
+        </div>
+
+        <div id="progress">
+            <input type="range" value="" max="" id="slider">
+        </div>
+
+        <div id="controls">
+            <button class="control" onclick=prevSong()>
+                <img src="icon-rembobiner.svg" alt="Musique précédente">
+            </button>
+            <button class="control" onclick=playPause()>
+                <img src="icon-pause.svg" alt="Pause">
+            </button>
+            <button class="control" onclick=nextSong()>
+                <img src="icon-avance-rapide.svg" alt="Musique suivante">
+            </button>
+        </div>
+    </div>
+
+    <div id="playlist">
+        <p>Ici viendra la playlist</p>
+    </div>
+
+    <div id="navigation" >
+        <p>Ici viendra la navigation de musique</p>
+    </div>
+    </div>
+</body>
+
+<script>
+    var audioControl = document.getElementById("controler");
+
+    function nextSong(){
+        console.log("Musique suivante");
+        audioControl.src ="zipette.mp3";
+    }
+</script>
