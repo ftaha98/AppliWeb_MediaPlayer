@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+<head> 
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<div id = "playlist"> Playlist en cours 
+		<button onclick='effacePlaylist()'> Effacer la Playlist </button>
+		<div id = 'musiques_playlist'></div>
+	</div>
+
+	<div id ="lecteur"> Lecteur 
+		<div id = "listeMusiques">
+			<div id = "musique1"> musique 1 
+				<div id = "controls">
+					<button onclick="addMusic(this)">
+						<img src="plus.svg" alt="ajouter à la Playlist" >
+					</button>
+					<button onclick="deleteMusic(this)">
+						<img src="bin.svg" alt="supprimer de la Playlist">
+					</button>
+				</div>
+			</div>
+			<div id = "musique2"> musique 2
+				<div id = "controls">
+					<button onclick="addMusic(this)">
+						<img src="plus.svg" alt="ajouter à la Playlist" >
+					</button>
+					<button onclick="deleteMusic(this)">
+						<img src="bin.svg" alt="supprimer de la Playlist">
+					</button>
+				</div>
+		</div>
+	</div>
+	
+	
+<script>
+
+	var musiques_playlist = document.getElementById('musiques_playlist');
+	var listeMusiques = document.getElementById('listeMusiques') ;
+	listeMusiques.style.border = "1px outset black"; 
+	listeMusiques.style.width = "300px"; 
+	listeMusiques.style.height = "300px" ;
+	var lecteur =document.getElementById('lecteur');
+	lecteur.style.border = "1px outset black" ; 
+	lecteur.style.height = " 300px";
+	lecteur.style.width = "300px"; 
+	var liste_musiques = ['test','test','test','test','test','test','test','test','test','test','test','test','test','test']; 
+	
+	function addMusic(e) {
+
+		var rectangle = document.createElement('div'); 
+		var id = Math.random().toString();
+		rectangle.id = id;
+		var music = document.getElementById(e.parentNode.parentNode.id)
+		music = music.innerHTML ;
+		rectangle.style.width  = "240px" ;
+		rectangle.style.height = "50px"; 
+		rectangle.style.border = "2px outset black" ;
+		rectangle.innerHTML = music ;
+		musiques_playlist.appendChild(rectangle);
+	}
+
+	function deleteMusic(e){
+		//this.parentNode.parentNode.removeChild();
+		console.log(e.parentNode.parentNode.id);
+		var idToRemove = e.parentNode.parentNode.id;
+		console.log(idToRemove);
+		e.parentNode.parentNode.remove();
+	}
+
+	function effacePlaylist(){
+		musiques_playlist.innerHTML = " " ;
+	}
+
+
+</script>
+
+<style>
+	#playlist
+	 {
+	 	overflow : auto ; 
+    	position: fixed;
+    	left: 71%;
+    	bottom: 2.5%;
+    	width: 28.5%;
+    	height: 45%;
+    	border: 2px solid;
+		background-color:grey;
+		border-radius: 10px;
+		transition: all 0.8s;
+	 }
+
+	#lecteur 
+	 {
+		margin-left:245px;
+		background-color :grey ;
+		border-radius: 10px;
+	 }
+
+	#controls{
+    margin: auto;
+    height: auto ;
+    width: auto;
+	}
+
+</style>
+
+</body>
+
+</html>

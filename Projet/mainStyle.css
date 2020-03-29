@@ -1,0 +1,159 @@
+body{
+    background-color: #222222;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#navigation{
+  overflow: auto;
+  position: fixed;
+  top: 2%;
+  width: 70%;
+  height: 95%;
+  border: 1px solid  blanchedalmond;
+  border-radius: 15px;
+}
+
+#playlist{
+    position: fixed;
+    left: 71%;
+    bottom: 2.75%;
+    width: 28.5%;
+    height: 45%;
+    border: 1px solid  blanchedalmond;
+    border-radius: 15px;
+}
+
+#player{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 2%;
+    left: 71%;
+    width: 28.5%;
+    height: 48%;
+    border: 1px solid  blanchedalmond;
+    border-radius: 15px;
+}
+
+#progress{
+    width: 80%;
+}
+
+.control {
+    background-color: #222222;
+    border-radius: 10px;
+    border: none;
+    margin: 10px;
+    cursor: pointer;
+    transition: all 10 ms;
+    outline: none;
+}
+
+.control:hover{
+  box-shadow: 0 4px #ababab;
+  background-color: #cccccc;
+}
+
+.control:active{
+  transform: translate(0,2px);
+  box-shadow: 0 0 #ababab;
+}
+
+#player~img{
+  max-width: 100%;
+  height: auto;
+}
+
+
+#slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;  
+  background: #a5a5a5;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin: 10px;
+}
+
+#slider:hover{
+  box-shadow: 0 0 5px #cccccc;
+}
+
+#slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%; 
+  background: white;
+  cursor: pointer;
+}
+
+#slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+
+#slider::-moz-range-progress{
+  height: 8px;
+  background-color: ivory;
+}
+
+#slider::-webkit-slider-runnable-track {
+  background: #ddd;
+}
+
+.divArtistNav{
+  width: 90%;
+  height: 50px;
+  margin: 10px auto;
+  padding: 0 10px;
+  color: white;
+  font-size: 30px;
+  font-weight: lighter;
+  background-color: #a5a5a5;
+  box-shadow: 0 0 5px #cccccc;
+  transition: all 0.5s;
+}
+
+.divArtistNav:hover{
+  cursor: pointer;
+  background-color: #a5a5a5;
+  box-shadow: 0 0 5px #cccccc;
+  box-shadow: inset 0 0 5px #cccccc;
+}
+
+.divAlbum{
+  display: flex;
+  padding: 5px 0;
+  border-top: 0.5px solid white;
+  width: 100%;
+  height: 60px;
+  background-color: #a5a5a5;
+}
+
+.spanAlbumName{
+  margin: auto 5px;
+  font-size: 20px;
+  font-variant: small-caps;
+}
+
+.spanAlbumDate{
+  margin: auto 5px;
+  font-size: 10px;
+}
+
+.imgAlbum{
+  margin: auto 5px;
+  height: 90%;
+  width: auto;
+}

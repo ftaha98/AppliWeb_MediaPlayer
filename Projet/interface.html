@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <title>MediaPlayer</title>
+    <link rel="stylesheet" href="mainStyle.css">
+    <script type="text/javascript" src="mainFunctions.js"></script>
+</head>
+
+<body onload="onload_setup()">
+    <div id="main">
+
+    <div id="player">
+        <div id="audioAlbum">
+            <audio id="audioplayer">
+                <source src="lettre-a-une-femme.mp3">
+            </audio>
+            <img src="img_mils3.png" alt="Album en cours de lecture" id="playerAlbum">
+        </div>
+
+        <div id="progress">
+            <input type="range" value="" max="" step="any" id="slider">
+        </div>
+
+        <div id="controls">
+            <button class="control" onclick=prevSong()>
+                <img src="icon-rembobiner.svg" alt="Musique précédente">
+            </button>
+            <button class="control" onclick=playPause()>
+                <img src="icon-jouer.svg" alt="Pause" id="playPause_img">
+            </button>
+            <button class="control" onclick=nextSong()>
+                <img src="icon-avance-rapide.svg" alt="Musique suivante">
+            </button>
+        </div>
+    </div>
+
+    <div id="playlist">
+        
+    </div>
+
+    <div id="navigation" >
+    </div>
+    </div>
+</body>

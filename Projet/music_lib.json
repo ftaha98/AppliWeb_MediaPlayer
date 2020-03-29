@@ -1,0 +1,58 @@
+{
+    "artists": [
+    {
+        "name": "Ninho",
+        "albums": [
+            {
+                "name": "M.I.L.S 3",
+                "date": "2020",
+                "n_tracks": 17,
+                "album_img": "img_mils3.png",
+                "tracks_name": [
+                    {
+                        "name": "Zipette",
+                        "file": "zipette.mp3"
+                    },
+                    {
+                        "name": "Lettre à une femme",
+                        "file": "lettre-à-une-femme"
+                    }
+                ]
+            },
+            {
+                "name": "Destin",
+                "date": 2019,
+                "n_tracks": 18,
+                "album_img": "img_destin.png",
+                "tracks_name": [
+                    {
+                        "name": "Goutte d'eau",
+                        "file": "goutte-d-eau.mp3"
+                    }
+                ]
+            }
+        ]   
+    },
+    {
+        "name": "PNL",
+        "albums": [
+            {
+                "name": "Deux Frères",
+                "date": "2019",
+                "n_tracks": 16,
+                "album_img": "img_deuxfreres.png",
+                "tracks_name": [
+                    {
+                        "name": "Déconnecté",
+                        "file": "deconnecte.mp3"
+                    },
+                    {
+                        "name": "Kuta Ubud",
+                        "file": "kuta-ubud.mp3"
+                    }
+                ]
+            }
+        ]
+    }
+    ]
+}
